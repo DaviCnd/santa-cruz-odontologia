@@ -31,3 +31,8 @@
 /* Mantém a marca na fachada e os dois quadros da recepção dentro do enquadramento. */
 .hero-image-wrap img{object-position:30% center}
 .about-main{object-position:78% center}
+.emergency-note{background:#fff;border-left:3px solid var(--sky);padding:15px 18px;margin-top:22px;box-shadow:0 8px 24px rgba(10,44,96,.04)}
+.emergency-note strong,.emergency-note span{display:block;line-height:1.5}
+.emergency-note strong{color:var(--navy);font-size:14px}
+.emergency-note span{color:var(--muted);font-size:12px;margin-top:3px}
+.emergency-note+.contact-list{margin-top:20px}
