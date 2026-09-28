@@ -1,19 +1,27 @@
 const menuButton = document.querySelector('.menu-button');
 const mainNav = document.querySelector('.main-nav');
 
+function setMenuOpen(isOpen) {
+  menuButton?.setAttribute('aria-expanded', String(isOpen));
+  menuButton?.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+  mainNav?.classList.toggle('is-open', isOpen);
+}
+
 menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
-  mainNav.classList.toggle('is-open', !isOpen);
+  setMenuOpen(!isOpen);
 });
 
 mainNav?.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('is-open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-    menuButton?.setAttribute('aria-label', 'Abrir menu');
-  });
+  link.addEventListener('click', () => setMenuOpen(false));
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMenuOpen(false);
+});
+
+document.addEventListener('click', (event) => {
+  if (!document.querySelector('.site-header')?.contains(event.target)) setMenuOpen(false);
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
