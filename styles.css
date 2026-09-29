@@ -36,3 +36,11 @@
 .emergency-note strong{color:var(--navy);font-size:14px}
 .emergency-note span{color:var(--muted);font-size:12px;margin-top:3px}
 .emergency-note+.contact-list{margin-top:20px}
+.emergency-callout{display:flex;align-items:center;gap:12px;max-width:520px;padding:14px 16px;margin:-9px 0 25px;border:1px solid #b9dfed;border-left:4px solid var(--sky);border-radius:6px;background:#fff;box-shadow:0 9px 26px rgba(9,42,106,.07)}
+.emergency-callout:hover{border-color:var(--blue)}
+.emergency-callout-icon{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;background:#e3f5fa;color:var(--blue);font-size:19px}
+.emergency-callout strong,.emergency-callout small{display:block;line-height:1.4}
+.emergency-callout strong{color:var(--navy);font-size:13px}
+.emergency-callout small{color:var(--muted);font-size:11px;margin-top:3px}
+.emergency-callout-arrow{color:var(--blue);font-size:19px;margin-left:auto}
+@media(max-width:600px){.emergency-callout{padding:12px;gap:9px}.emergency-callout strong{font-size:12px}.emergency-callout small{font-size:10px}}
