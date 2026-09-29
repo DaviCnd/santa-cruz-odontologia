@@ -44,3 +44,7 @@
 .emergency-callout small{color:var(--muted);font-size:11px;margin-top:3px}
 .emergency-callout-arrow{color:var(--blue);font-size:19px;margin-left:auto}
 @media(max-width:600px){.emergency-callout{padding:12px;gap:9px}.emergency-callout strong{font-size:12px}.emergency-callout small{font-size:10px}}
+
+/* Mostra a fachada inteira também no bloco de localização. */
+.location-visual{height:auto;aspect-ratio:8/5;background:#dcecf5}
+.location-visual>img{object-fit:contain;object-position:center}
